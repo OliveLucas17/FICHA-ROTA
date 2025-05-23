@@ -32,7 +32,7 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
     grauparentesco: form.grauparentesco.value ,
   };
 
-  fetch("https://script.google.com/macros/s/AKfycbw-LFjtCyPgP2jFoJDM0lVLN98ySnvHO9uq_LA6NZ-S5UFUVmgfmlPdzRinD64-dZn-Kg/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbw45ccdn5qEPp3TRHxERlbpNC-OBDudLvt7x71G6OwAgp4CYqvePH2zTVQkO1M3wmWiXA/exec", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
