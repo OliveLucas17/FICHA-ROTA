@@ -29,9 +29,10 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
     temConvenio: form.temConvenio.value,
     convenio: form.convenio?.value || "",
     emergencia: form.emergencia.value,
+    grauparentesco: form.grauparentesco.value ,
   };
 
-  fetch("https://script.google.com/macros/s/SEU_SCRIPT_ID/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbw-LFjtCyPgP2jFoJDM0lVLN98ySnvHO9uq_LA6NZ-S5UFUVmgfmlPdzRinD64-dZn-Kg/exec", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
