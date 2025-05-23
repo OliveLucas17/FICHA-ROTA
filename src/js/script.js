@@ -16,7 +16,7 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
     bairro: form.bairro.value,
     cidade: form.cidade.value,
     CEP: form.CEP.value,
-    moto: form.moto.value,
+    motoDetalhe: form.motoDetalhe.value,
     coletado: form.coletado.value,
     membroBoasNovas: form.membroBoasNovas.value,
     inicioBoasNovas: form.inicioBoasNovas?.value || "",
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   temConvenio.addEventListener("change", function () {
-    document.getElementById("campoconvenio").style.display =
+    document.getElementById("campoConvenio").style.display =
       this.value === "sim" ? "block" : "none";
   });
 });
