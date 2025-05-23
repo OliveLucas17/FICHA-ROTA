@@ -7,12 +7,46 @@
     <link rel="stylesheet" href="./src/css/stilo.css">
     <title>ROTA 3:16</title>
 </head>
-<header>
-    <img src="./src/assets/logo.png" alt="Logo" width="200">
+<header class="topo">
+    <img src="./src/assets/logo.png" alt="Logo" width="100">
     <h1 class="title">FICHA CADASTRAL - ROTA 3:16</h1>
 </header>
 <body>
+    <form id="Ficha" class="formulario">
+        <h2>Ficha cadastral - Rota 3:16</h2>
+        <label>Nome completo </label>
+        <input type="text" name="nome" placeholder="Nome Completo" required/>
+        <label>Data de nascimento</label>
+        <input type="date" id="data-nascimento" name="Data de Nascimento" required value="01-01-0000"/> 
+        <label>Tipo sanguíneo</label>
+        <select name="sangue" required>
+            <option value="">Selecione</option>
+            <option>O+</option><option>O-</option>
+            <option>A+</option><option>A-</option>
+            <option>B+</option><option>B-</option>
+            <option>AB+</option><option>AB-</option>                
+        </select>    
+        <label>Telefone </label>
+        <input type="tel" name="telefone" placeholder="dd 99999-9999" required pattern="\d{2} \d{5}-\d{4}" />             
+        <label>Rua</label>
+        <input type="text" name="rua" placeholder="" required/>
+        <label>Bairro</label>
+        <input type="text" name="bairro" placeholder="" required/>
+        <label>Cidade</label>
+        <input type="text" name="cidade" placeholder="" required/>
+        <label> CEP</label>
+        <input type="Text" name="CEP" placeholder="00000-000" required pattern="\d{5}-\d{3}"/>
+        <label>Modelo moto</label>
+        <input type="text" name="moto" placeholder="Modelo" required/>
+        <label>Coletado</label>
+        <select name="coletado" required>
+            <option value="">Selecione</option>
+            <option>Sim</option><option>Não</option>
+        </select>   
 
+        <button type="submit">Salvar / Gerar Carteirinha</button>
+    </form>
+  </div>
 </body>
 <!--CHAMANDO JS-->
 <SCript src="./src/js/script.js"></SCript>
