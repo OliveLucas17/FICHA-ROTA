@@ -14,6 +14,7 @@
 <body>
     <form id="Ficha" class="formulario">
         <h2>Ficha cadastral - Rota 3:16</h2>
+        <!--DADOS PESSOAIS-->
         <label>Nome completo </label>
         <input type="text" name="nome" placeholder="Nome Completo" required/>
         <label>Data de nascimento</label>
@@ -34,23 +35,85 @@
         <input type="tel" name="telefone" placeholder="dd 99999-9999" required />             
         <label> Email</label>
         <input type="text" name="email" required placeholder="Seu@email.com">
+        <!--Endereço-->
         <label> CEP</label>
         <input type="Text" name="CEP" placeholder="00000-000" required/>
         <label>Rua</label>
         <input type="text" name="rua" placeholder="" required/>
         <label>Numero</label>
         <input type="text" name="numero" placeholder="" required/>
+        <label>Complemento</label>
+        <input type="text" name="complemento" placeholder="Complemento">
         <label>Bairro</label>
         <input type="text" name="bairro" placeholder="" required/>
         <label>Cidade</label>
         <input type="text" name="cidade" placeholder="" required/>
-        <label>Modelo moto</label>
-        <input type="text" name="moto" placeholder="Modelo" required/>
+        <!--Dados congregacionais-->
+        <label>É membro de Boas novas</label>
+        <select name="membroBoasNovas" id="membroboasnovas" required>
+            <option value="">Selecione</option>
+            <option value="Sim"></option>
+            <option value="Não"></option>
+        </select>
+        <div id="campoBoasNovasSim" style="display: none;">
+            <label>Desde quando?</label>
+            <input type="text" name="inicioBoasNovas">
+        </div>
+        
+        <Div id="campoBoasNovasNao" style="display: none;">
+            <label> Qual igreja frequenta?</label>
+            <input type="text" name="igreja"/>
+        </Div>
+
+        <label>Batizado ?</label>
+        <select name="Batizado" id="batismo">
+            <option value="">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+        <div id="campoBatizadoSim" style="display: none;">
+            <label>Ano de BATISMO</label>
+            <input type="number" >
+        </div>
+        <div id="campoBatizadoNao" style="display: none;">
+            <label>Esta participando de alguma turma de batizado?</label>
+            <input type="text" name="Nbatizado" placeholder="Insira aqui">
+        </div>
+        <!--MOTO-->
+        <label>Tipo</label>
+        <select name="tipo" id="tipo" required>
+            <option value="">Selecione</option>
+            <option value="piloto">Piloto</option>
+            <option value="garupa">Garupa</option>
+        </select>
+
+        <div id="camposPiloto" style="display:none;">
+        <label>Moto</label>
+            <input type="text" name="motoDetalhe" placeholder="Modelo da moto" />
+            <label>Placa</label>
+            <input type="text" name="placa" placeholder="Placa" />
+            </div>  
+        <!--Colete-->
         <label>Coletado</label>
         <select name="coletado" required>
             <option value="">Selecione</option>
             <option>Sim</option><option>Não</option>
         </select>   
+        <!--Dados médicos -->
+        <label>Tem convênio médico?</label>
+        <select name="temConvenio" id="temConvenio" required>
+            <option value="">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+
+        <div id="campoConvenio" style="display:none;">
+            <label>Qual convênio?</label>
+            <input type="text" name="convenio" />
+        </div>
+
+        <label>Contato de Emergência</label>
+        <input type="text" name="emergencia" placeholder="Nome e telefone" required />
 
         <button type="submit">Salvar / Gerar Carteirinha</button>
     </form>

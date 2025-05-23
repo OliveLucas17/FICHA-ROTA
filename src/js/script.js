@@ -1,43 +1,57 @@
 document.getElementById("Ficha").addEventListener("submit", function (e) {
   e.preventDefault();
-
   const form = e.target;
 
   const data = {
     nome: form.nome.value,
     "Data de Nascimento": form["Data de Nascimento"].value,
-    CPF: form["cpf"].value,
-    RG: form["rg"].value,
+    CPF: form.cpf.value,
+    RG: form.rg.value,
     sangue: form.sangue.value,
     telefone: form.telefone.value,
     email: form.email.value,
     rua: form.rua.value,
     numero: form.numero.value,
+    complemento: form.complemento.value,
     bairro: form.bairro.value,
     cidade: form.cidade.value,
     CEP: form.CEP.value,
     moto: form.moto.value,
     coletado: form.coletado.value,
+    membroBoasNovas: form.membroBoasNovas.value,
+    inicioBoasNovas: form.inicioBoasNovas?.value || "",
+    igreja: form.igreja?.value || "",
+    batizado: form.batizado.value,
+    anoBatismo: form.anoBatismo?.value || "",
+    tipo: form.tipo.value,
+    motoDetalhe: form.motoDetalhe?.value || "",
+    placa: form.placa?.value || "",
+    temConvenio: form.temConvenio.value,
+    convenio: form.convenio?.value || "",
+    emergencia: form.emergencia.value,
   };
 
-  fetch("https://script.google.com/macros/s/AKfycbyQHWmwSfGxWZYH_L2JzIhAD_uzLt7wGhE4KWVV3Kog4tWfy5brX724zxh4jNvCWGlzhQ/exec", {
+  fetch("https://script.google.com/macros/s/SEU_SCRIPT_ID/exec", {
     method: "POST",
-    mode: "no-cors", // Evita erro CORS (não permite resposta visível)
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
   })
-    .then(() => {
-      alert("Ficha enviada com sucesso");
-      form.reset();
-    })      
+    .then(response => {
+      // Caso use "no-cors", esta parte não será executada.
+      if (response.ok) {
+        alert("Ficha enviada com sucesso!");
+        form.reset();
+      } else {
+        alert("Erro ao enviar ficha. Tente novamente.");
+      }
+    })
     .catch(error => {
       console.error("Erro no fetch:", error);
       alert("Erro ao enviar ficha: " + error.message);
     });
-
-})
+});
 document.getElementById("data-nascimento").addEventListener("input", function (e) {
   let value = e.target.value.replace(/\D/g, '').slice(0, 8);
   if (value.length >= 5)
@@ -66,4 +80,33 @@ document.querySelector('input[name="CEP"]').addEventListener('blur', function ()
           document.querySelector('input[name="cidade"]').value = data.localidade || '';
       })
       .catch(() => alert("Erro ao buscar o endereço. Tente novamente."));
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tipoSelect = document.getElementById("tipo");
+  const membroBoasNovas = document.getElementById("membroBoasNovas");
+  const temConvenio = document.getElementById("temConvenio");
+
+  tipoSelect.addEventListener("change", function () {
+    document.getElementById("camposPiloto").style.display =
+      this.value === "piloto" ? "block" : "none";
+  });
+
+  membroBoasNovas.addEventListener("change", function () {
+    document.getElementById("campoBoasNovasSim").style.display =
+      this.value === "sim" ? "block" : "none";
+    document.getElementById("campoBoasNovasNao").style.display =
+      this.value === "nao" ? "block" : "none";
+  });
+
+  temConvenio.addEventListener("change", function () {
+    document.getElementById("campoConvenio").style.display =
+      this.value === "sim" ? "block" : "none";
+  });
+});
+
+document.getElementById("batismo").addEventListener("change", function () {
+  const valor = this.value;
+  document.getElementById("campoBatizadoSim").style.display = valor === "sim" ? "block" : "none";
+  document.getElementById("campoBatizadoNao").style.display = valor === "nao" ? "block" : "none";
 });
