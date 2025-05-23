@@ -40,19 +40,15 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
     },
     body: JSON.stringify(data),
   })
-    .then(response => {
-      // Caso use "no-cors", esta parte não será executada.
-      if (response.ok) {
-        alert("Ficha enviada com sucesso!");
-        form.reset();
-      } else {
-        alert("Erro ao enviar ficha. Tente novamente.");
-      }
-    })
-    .catch(error => {
-      console.error("Erro no fetch:", error);
-      alert("Erro ao enviar ficha: " + error.message);
-    });
+   .then(() => {
+  // Mesmo sem confirmação, considera sucesso
+  alert("Ficha enviada com sucesso!");
+  form.reset();
+})
+.catch(error => {
+  console.error("Erro no fetch:", error);
+  alert("Erro ao enviar ficha: " + error.message);
+});
 });
 document.getElementById("data-nascimento").addEventListener("input", function (e) {
   let value = e.target.value.replace(/\D/g, '').slice(0, 8);
