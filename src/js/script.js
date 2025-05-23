@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   temConvenio.addEventListener("change", function () {
-    document.getElementById("campoConvenio").style.display =
+    document.getElementById("campoconvenio").style.display =
       this.value === "sim" ? "block" : "none";
   });
 });
