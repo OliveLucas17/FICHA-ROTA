@@ -12,17 +12,18 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
     email: form.email.value,
     rua: form.rua.value,
     numero: form.numero.value,
-    complemento: form.complemento.value,
+    complemento: form.complemento?.value || "",
     bairro: form.bairro.value,
     cidade: form.cidade.value,
     CEP: form.CEP.value,
-    motoDetalhe: form.motoDetalhe.value,
     coletado: form.coletado.value,
+    anocoletamento: form.anocoletamento?.value || "", 
     membroBoasNovas: form.membroBoasNovas.value,
     inicioBoasNovas: form.inicioBoasNovas?.value || "",
     igreja: form.igreja?.value || "",
     batizado: form.batizado.value,
     anoBatismo: form.anoBatismo?.value || "",
+    Nbatizado: form.Nbatizado?.value || "",
     tipo: form.tipo.value,
     motoDetalhe: form.motoDetalhe?.value || "",
     placa: form.placa?.value || "",
@@ -32,6 +33,8 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
     grauparentesco: form.grauparentesco.value ,
   };
 
+ console.log("Dados enviados:", data);
+ 
   fetch("https://script.google.com/macros/s/AKfycbw45ccdn5qEPp3TRHxERlbpNC-OBDudLvt7x71G6OwAgp4CYqvePH2zTVQkO1M3wmWiXA/exec", {
     method: "POST",
     mode: "no-cors",
@@ -84,6 +87,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const tipoSelect = document.getElementById("tipo");
   const membroBoasNovas = document.getElementById("membroBoasNovas");
   const temConvenio = document.getElementById("temConvenio");
+  const batismo = document.getElementById("batismo")
+  const coletado = document.getElementById("coletado") 
 
   tipoSelect.addEventListener("change", function () {
     document.getElementById("camposPiloto").style.display =
@@ -101,10 +106,16 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("campoConvenio").style.display =
       this.value === "sim" ? "block" : "none";
   });
-});
 
-document.getElementById("batismo").addEventListener("change", function () {
+
+  batismo.addEventListener("change", function () {
   const valor = this.value;
   document.getElementById("campoBatizadoSim").style.display = valor === "sim" ? "block" : "none";
   document.getElementById("campoBatizadoNao").style.display = valor === "nao" ? "block" : "none";
+  });
+
+  coletado.addEventListener("change", function(){
+  const valor = this.value.toLowerCase();
+  document.getElementById("coletadosim").style.display = valor == "sim" ? "block" : "none";
+  })
 });

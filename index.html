@@ -88,17 +88,23 @@
         </select>
 
         <div id="camposPiloto" style="display:none;">
-        <label>Moto</label>
+        <label>Modelo</label>
             <input type="text" name="motoDetalhe" placeholder="Modelo da moto" />
             <label>Placa</label>
             <input type="text" name="placa" placeholder="Placa" />
         </div>  
         <!--Colete-->
         <label>Coletado</label>
-        <select name="coletado" required>
+        <select name="coletado" id="coletado" required>
             <option value="">Selecione</option>
-            <option>Sim</option><option>Não</option>
-        </select>   
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>  
+        
+        <div id="coletadosim" style="display: none;">
+            <label>Ano de coletamento</label>
+            <input type="number" name="anocoletamento" id="anocoletamento">
+        </div>
         <!--Dados médicos -->
         <label>Tem convênio médico?</label>
         <select name="temConvenio" id="temConvenio" required>
