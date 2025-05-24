@@ -119,3 +119,4 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("coletadosim").style.display = valor == "sim" ? "block" : "none";
   })
 });
+
