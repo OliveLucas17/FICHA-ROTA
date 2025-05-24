@@ -28,7 +28,7 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
     /*Batismo*/
     batizado: form.batizado.value,
     anoBatismo: form.anoBatismo?.value || "",
-    Nbatizado: form.Nbatizado?.value || "",
+    nbatizado: form.nbatizado?.value || "",
 
     /*Moto*/
     tipo: form.tipo.value,
@@ -45,7 +45,7 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
 
     /*Doenca*/
     doenca: form.doenca.value|| "",
-    tipoDoenca: form.tipoDoenca?.value || "",
+    tipoDoenca: form.tipodoenca?.value || "",
 
     /*Alergia*/
     alergia: form.alergia.value || "",
