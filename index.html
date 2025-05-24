@@ -118,6 +118,41 @@
             <input type="text" name="convenio" />
         </div>
 
+        <label>Possui alguma doença ?</label>
+        <select name="doenca" id="doenca">
+            <option value="">Selecione</option>
+            <option value="sim">sim</option>
+            <option value="nao">nao</option>
+        </select>            
+
+        <div id="doencasim" style="display: none;">
+            <label>Qual ?</label>
+            <select name="tipodoenca" id="tipodoenca">
+                <option value="">Selecione</option>
+                <option value="pressa">Pressão alta</option>
+                <option value="diabete">Diabete</option>
+                <option value="asma">Asma</option>
+                <option value="outro">Outros</option>
+            </select>
+        </div>
+
+        <div id="outradoenca" style="display: none;">
+            <label>Descreva aqui:</label>
+            <input type="text" name="descricaodoenca">
+        </div>
+
+        <label> Possui algum tipo de alergia ?</label>
+        <select name="alergia" id="alergia">
+            <option value="">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>    
+
+        <div id="alergiasim" style="display: none;">
+            <label>Descreva qual</label>
+            <input type="text" name="tipoalergia" id="tipoalergia">
+        </div>
+
         <label>Contato de Emergência</label>
         <input type="text" name="emergencia" placeholder="Nome e telefone" required />
         <label>Grau de Parentesco</label>
@@ -130,6 +165,8 @@
             <option value="marido">Marido</option>
             <option value="esposa">Esposa</option>
         </select>
+
+
 
 
         <button type="submit">Enviar</button>

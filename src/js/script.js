@@ -3,6 +3,7 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
   const form = e.target;
 
   const data = {
+    /* Dados pessoa */
     nome: form.nome.value,
     "Data de Nascimento": form["Data de Nascimento"].value,
     CPF: form.cpf.value,
@@ -10,25 +11,47 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
     sangue: form.sangue.value,
     telefone: form.telefone.value,
     email: form.email.value,
+
+    /*Endereco*/
     rua: form.rua.value,
     numero: form.numero.value,
     complemento: form.complemento?.value || "",
     bairro: form.bairro.value,
     cidade: form.cidade.value,
     CEP: form.CEP.value,
+
+    /*Igreja*/
     membroBoasNovas: form.membroBoasNovas.value,
     inicioBoasNovas: form.inicioBoasNovas?.value || "",
     igreja: form.igreja?.value || "",
+
+    /*Batismo*/
     batizado: form.batizado.value,
     anoBatismo: form.anoBatismo?.value || "",
     Nbatizado: form.Nbatizado?.value || "",
+
+    /*Moto*/
     tipo: form.tipo.value,
     motoDetalhe: form.motoDetalhe?.value || "",
     placa: form.placa?.value || "",
+
+    /*Colete*/
     coletado: form.coletado.value,
     anocoletamento: form.anocoletamento?.value || "", 
+
+    /*Convenio*/
     temConvenio: form.temConvenio.value,
     convenio: form.convenio?.value || "",
+
+    /*Doenca*/
+    doenca: form.doenca.value|| "",
+    tipoDoenca: form.tipoDoenca?.value || "",
+
+    /*Alergia*/
+    alergia: form.alergia.value || "",
+    tipoAlergia: form.tipoalergia?.value || "",
+
+    /*Emergencia*/
     emergencia: form.emergencia.value,
     grauparentesco: form.grauparentesco.value ,
   };
@@ -87,8 +110,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const tipoSelect = document.getElementById("tipo");
   const membroBoasNovas = document.getElementById("membroBoasNovas");
   const temConvenio = document.getElementById("temConvenio");
-  const batismo = document.getElementById("batismo")
-  const coletado = document.getElementById("coletado") 
+  const batismo = document.getElementById("batismo");
+  const coletado = document.getElementById("coletado"); 
+  const doenca = document.getElementById("doenca");
+  const doencasim = document.getElementById("doencasim");
+  const tipodoenca = document.getElementById("tipodoenca")
+  const outradoenca = document.getElementById("outradoenca");
+  const alergia = document.getElementById("alergia");
+  const alergiasim = document.getElementById("alergiasim");
 
   tipoSelect.addEventListener("change", function () {
     document.getElementById("camposPiloto").style.display =
@@ -117,6 +146,20 @@ document.addEventListener("DOMContentLoaded", function () {
   coletado.addEventListener("change", function(){
   const valor = this.value.toLowerCase();
   document.getElementById("coletadosim").style.display = valor == "sim" ? "block" : "none";
-  })
+  });
+
+  doenca.addEventListener("change", function(){
+   doencasim.style.display = this.value === "sim" ? "block" : "none";
+   outradoenca.style.display = "none"; // sempre retorna pro principal
+  });
+
+  tipodoenca.addEventListener ("change", function(){
+    outradoenca.style.display = this.value === "outro" ? "block" : "none";
+  });
+
+  alergia.addEventListener("change", function () {
+    alergiasim.style.display = this.value === "sim" ? "block" : "none";
+  });
+
 });
 
