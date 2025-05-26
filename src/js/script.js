@@ -45,7 +45,8 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
 
     /*Doenca*/
     doenca: form.doenca.value|| "",
-    tipoDoenca: form.tipodoenca?.value || "",
+    tipodoenca: form.tipodoenca?.value || "",
+    descricaodoenca: form.descricaodoenca?.value || "",
 
     /*Alergia*/
     alergia: form.alergia.value || "",
