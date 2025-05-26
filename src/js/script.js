@@ -59,7 +59,7 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
 
  console.log("Dados enviados:", data);
  
-  fetch("https://script.google.com/macros/s/AKfycbwaUu2Gh4Jbt86FVtqafTx78S7r2vA5H1QHltsYiXnWjoAAhLHH2jcVhuPcEuUphRCPig/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbx1tUwyhWiT4z10rkef0QP0lRaC4RotJCeS5-JKkNJPaHqVSz9fa9xE0BaAyZIj7OfY/exec", {
     method: "POST",
     mode: "no-cors",
     headers: {
