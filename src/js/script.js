@@ -1,13 +1,8 @@
-document.getElementById("Ficha").addEventListener("submit", async function (e) {
+document.getElementById("Ficha").addEventListener("submit",  function (e) {
   e.preventDefault();
   const form = e.target;
 
-    // Primeiro, envia a foto separadamente
-    const urlFoto = await enviarFotoSeparadamente(form);
-    if (!urlFoto) {
-    alert("Erro ao enviar foto.");
-    return;
-    }
+
 
   const data = {
     /* Dados pessoa */
@@ -86,42 +81,6 @@ document.getElementById("Ficha").addEventListener("submit", async function (e) {
   alert("Erro ao enviar ficha: " + error.message);
 });
 });
-
-  async function enviarFotoSeparadamente(form) {
-  const fileInput = document.getElementById("foto");
-  const arquivo = fileInput.files[0];
-
-  if (!arquivo) {
-    alert("Você precisa escolher uma foto.");
-    return null;
-  }
-
-  const formData = new FormData();
-  formData.append("foto", arquivo);
-  formData.append("nome", form.nome.value);
-
-  try {
-    const resposta = await fetch("https://script.google.com/macros/s/AKfycby7NQgT5A2Sp_YWWkM7in9Me1z8rWHo7_4L4EsLD-ifqsZ4rHPVsuVBxdA7dgOH6jlW/exec", {
-      method: "POST",
-      body: formData
-      // ⚠️ Não defina 'Content-Type' aqui!
-    });
-
-    const resultadoTexto = await resposta.text();
-
-    try {
-      const resultadoJson = JSON.parse(resultadoTexto);
-      return resultadoJson.urlFoto;
-    } catch (erro) {
-      console.error("Erro ao interpretar JSON:", resultadoTexto);
-      return null;
-    }
-
-  } catch (erro) {
-    console.error("Erro ao enviar imagem:", erro.message || erro);
-    return null;
-  }
-}
 
 
 document.getElementById("data-nascimento").addEventListener("input", function (e) {
