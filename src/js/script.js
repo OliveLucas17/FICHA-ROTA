@@ -87,8 +87,7 @@ document.getElementById("Ficha").addEventListener("submit", async function (e) {
 });
 });
 
-// Função para enviar a imagem
-async function enviarFotoSeparadamente(form) {
+  async function enviarFotoSeparadamente(form) {
   const fileInput = document.getElementById("foto");
   const arquivo = fileInput.files[0];
 
@@ -104,17 +103,26 @@ async function enviarFotoSeparadamente(form) {
   try {
     const resposta = await fetch("https://script.google.com/macros/s/AKfycby7NQgT5A2Sp_YWWkM7in9Me1z8rWHo7_4L4EsLD-ifqsZ4rHPVsuVBxdA7dgOH6jlW/exec", {
       method: "POST",
-      body: formData,
+      body: formData
+      // ⚠️ Não defina 'Content-Type' aqui!
     });
 
-    
-    const resultado = await resposta.json();
-    return resultado.urlFoto;
+    const resultadoTexto = await resposta.text();
+
+    try {
+      const resultadoJson = JSON.parse(resultadoTexto);
+      return resultadoJson.urlFoto;
+    } catch (erro) {
+      console.error("Erro ao interpretar JSON:", resultadoTexto);
+      return null;
+    }
+
   } catch (erro) {
-    console.error("Erro ao enviar imagem:", erro);
+    console.error("Erro ao enviar imagem:", erro.message || erro);
     return null;
   }
 }
+
 
 document.getElementById("data-nascimento").addEventListener("input", function (e) {
   let value = e.target.value.replace(/\D/g, '').slice(0, 8);
