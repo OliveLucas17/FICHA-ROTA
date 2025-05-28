@@ -107,6 +107,7 @@ async function enviarFotoSeparadamente(form) {
       body: formData,
     });
 
+    w
     const resultado = await resposta.json();
     return resultado.urlFoto;
   } catch (erro) {
