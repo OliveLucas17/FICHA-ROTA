@@ -1,6 +1,13 @@
-document.getElementById("Ficha").addEventListener("submit", function (e) {
+document.getElementById("Ficha").addEventListener("submit", async function (e) {
   e.preventDefault();
   const form = e.target;
+
+    // Primeiro, envia a foto separadamente
+    const urlFoto = await enviarFotoSeparadamente(form);
+    if (!urlFoto) {
+    alert("Erro ao enviar foto.");
+    return;
+    }
 
   const data = {
     /* Dados pessoa */
@@ -11,7 +18,7 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
     sangue: form.sangue.value,
     telefone: form.telefone.value,
     email: form.email.value,
-
+    
     /*Endereco*/
     rua: form.rua.value,
     numero: form.numero.value,
@@ -55,6 +62,8 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
     /*Emergencia*/
     emergencia: form.emergencia.value,
     grauparentesco: form.grauparentesco.value ,
+
+
   };
 
  console.log("Dados enviados:", data);
@@ -77,6 +86,35 @@ document.getElementById("Ficha").addEventListener("submit", function (e) {
   alert("Erro ao enviar ficha: " + error.message);
 });
 });
+
+// Função para enviar a imagem
+async function enviarFotoSeparadamente(form) {
+  const fileInput = document.getElementById("foto");
+  const arquivo = fileInput.files[0];
+
+  if (!arquivo) {
+    alert("Você precisa escolher uma foto.");
+    return null;
+  }
+
+  const formData = new FormData();
+  formData.append("foto", arquivo);
+  formData.append("nome", form.nome.value);
+
+  try {
+    const resposta = await fetch("https://script.google.com/macros/s/AKfycby7NQgT5A2Sp_YWWkM7in9Me1z8rWHo7_4L4EsLD-ifqsZ4rHPVsuVBxdA7dgOH6jlW/exec", {
+      method: "POST",
+      body: formData,
+    });
+
+    const resultado = await resposta.json();
+    return resultado.urlFoto;
+  } catch (erro) {
+    console.error("Erro ao enviar imagem:", erro);
+    return null;
+  }
+}
+
 document.getElementById("data-nascimento").addEventListener("input", function (e) {
   let value = e.target.value.replace(/\D/g, '').slice(0, 8);
   if (value.length >= 5)

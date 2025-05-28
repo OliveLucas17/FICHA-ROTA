@@ -1,0 +1,173 @@
+[33mcommit 53a8f38d9b43563dfa2b979b2d6604d9a530202e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev[m[33m, [m[1;31morigin/dev[m[33m)[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Mon May 26 18:11:17 2025 -0300
+
+    troca api
+
+[33mcommit cd751321ad7251c1aa275ee3d310ae9a587c7713[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Mon May 26 17:19:17 2025 -0300
+
+    PUXAN
+
+[33mcommit b91cdcd4aba083d30fd5060614341135204d9505[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Mon May 26 17:00:53 2025 -0300
+
+    troca da api
+
+[33mcommit d0385330287ad19b094d63c161a28ae8978207ed[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Mon May 26 16:43:34 2025 -0300
+
+    troca de fetch
+
+[33mcommit eee7c4b4ec4e2a9f6a650ca5d466631197242c59[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Mon May 26 16:21:23 2025 -0300
+
+    troca de implementacao
+
+[33mcommit fac8ab9b0333175368cb5970e260b987f37356fc[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Mon May 26 13:26:16 2025 -0300
+
+    categoria
+
+[33mcommit 146ff061199fdee15b06bf1752e75c0da71defd9[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Mon May 26 13:22:05 2025 -0300
+
+    alteracoes para ajuste
+
+[33mcommit 361125157a4b074607575d65ec72b4141ca21576[m
+Author: Lucas <lucas170804@gmail.com>
+Date:   Sun May 25 22:23:02 2025 -0300
+
+     alterando tipo de comorbidade
+
+[33mcommit 687c4ef22cdc27fbeeefa11b98ae1f0ed4981e7b[m
+Author: Lucas <lucas170804@gmail.com>
+Date:   Sat May 24 14:05:35 2025 -0300
+
+    js e alinhamento
+
+[33mcommit 051d088c457e2f2ea8e2f99a3b1624d9cc3b5c29[m
+Author: Lucas <lucas170804@gmail.com>
+Date:   Sat May 24 13:37:44 2025 -0300
+
+    criando alergia e doenca
+
+[33mcommit 7a85415084412fc6ba71bca8b3815a3d6d81cb68[m
+Author: Lucas <lucas170804@gmail.com>
+Date:   Sat May 24 12:37:39 2025 -0300
+
+    correcao js
+
+[33mcommit 4cc87824157d5f7eea41a5f0ef1e96e713650efa[m
+Author: Lucas <lucas170804@gmail.com>
+Date:   Sat May 24 12:02:14 2025 -0300
+
+    correcao de sequencia forms
+
+[33mcommit 35302854389a66b5afeac9f486a1da88dc602ffa[m
+Author: Lucas <lucas170804@gmail.com>
+Date:   Sat May 24 11:36:36 2025 -0300
+
+    ajustando valores para alinhar excel
+
+[33mcommit 95ccbbdf0206ffcab366b347be3f76ac46e9b2fd[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Fri May 23 17:25:29 2025 -0300
+
+    correcao response
+
+[33mcommit 90332504646c393118826b636cc8ff997956b17d[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Fri May 23 17:12:37 2025 -0300
+
+    no-cors
+
+[33mcommit 05a209eaa43ac22963dbc20516b12d83fa85e97f[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Fri May 23 17:10:05 2025 -0300
+
+    batizado
+
+[33mcommit a449178818c7303572ac3dee758a4e684d310c8b[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Fri May 23 16:58:04 2025 -0300
+
+    dev
+
+[33mcommit 111be758d3867c9614ea3c3f7708ca0837a33c43[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Fri May 23 16:45:24 2025 -0300
+
+    exec
+
+[33mcommit 239a606cf995ba1783f65b8e51501842d7b3b337[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Fri May 23 16:40:16 2025 -0300
+
+    api
+
+[33mcommit 054224cb93cedb68549278c576ee23a5663ee45c[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Fri May 23 16:33:39 2025 -0300
+
+    erros bugs
+
+[33mcommit 7d40bd91a0bb096c15ff496f609343ab99febfe7[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Fri May 23 16:30:27 2025 -0300
+
+    erro div campo
+
+[33mcommit 56535a54dfc7e803d4c1fdbd605c8fc97f498acc[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Fri May 23 16:27:33 2025 -0300
+
+    commit erro campo congregacionais
+
+[33mcommit 13e0c111c6d74e9153f2a71526ecd9603cd28c39[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Fri May 23 16:15:47 2025 -0300
+
+    Dados de congração
+
+[33mcommit ec76e2c05e9356b6fa5e68a8c35414ee4132cb9f[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Fri May 23 16:13:38 2025 -0300
+
+    add parentesco
+
+[33mcommit e3cb7bcd7017c416fea3bc5306d45e6dcb9b428a[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Fri May 23 15:44:45 2025 -0300
+
+    Ajuste script HMTL E Js com adição dos novos campos
+
+[33mcommit 3542263f3613e50cd05f5b7e8e3259293234bce2[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Fri May 23 14:36:48 2025 -0300
+
+    retirando mod tel
+
+[33mcommit 9a6259a853935b6be1a64c7a2092ce5bff54dda6[m
+Author: Lucas Oliveira <lucas170804@gmail.com>
+Date:   Fri May 23 14:21:16 2025 -0300
+
+    returando identacao de telefone
+
+[33mcommit 1c1a3e76ca7a18697cfdabdf41b22372d6e7ca36[m
+Author: Lucas <labsfiap@fiap.com.br>
+Date:   Fri May 23 10:10:04 2025 -0300
+
+    Rodando parte de formulario e carterinha
+
+[33mcommit acd4176bfb22356d3972efe62e80348b6e86c5ee[m
+Author: Lucas <labsfiap@fiap.com.br>
+Date:   Fri May 23 09:03:17 2025 -0300
+
+    add dados
